@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Projet_.Net.Data;
 
@@ -11,9 +12,10 @@ using Projet_.Net.Data;
 namespace Projet_.Net.Migrations
 {
     [DbContext(typeof(Projet_NetContext))]
-    partial class Projet_NetContextModelSnapshot : ModelSnapshot
+    [Migration("20221126100006_roles")]
+    partial class roles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

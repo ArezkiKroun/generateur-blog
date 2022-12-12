@@ -9,8 +9,10 @@ builder.Services.AddDbContext<Projet_NetContext>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<Projet_NetContext>();
 
+builder.Services.AddScoped<RoleManager<IdentityRole>>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 // Add services to the container.

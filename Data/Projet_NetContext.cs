@@ -6,6 +6,9 @@ namespace Projet_.Net.Data;
 
 public class Projet_NetContext : IdentityDbContext<User>
 {
+    public DbSet<Blog> Blogs { get; set; }
+    public DbSet<Role> Roles { get; set; }
+
     public Projet_NetContext(DbContextOptions<Projet_NetContext> options)
         : base(options)
     {
